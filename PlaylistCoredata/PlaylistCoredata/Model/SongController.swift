@@ -9,18 +9,13 @@
 import Foundation
 
 class SongController {
-   
-    
-    
-    
-    
     
     //Mark: - CRUD
-    func createSong(songName: String, and artistName: String, addTo playlist: Playlist) {
+    static func createSong(songName: String, and artistName: String, addTo playlist: Playlist) {
         Song(songName: songName, artistName: artistName, playlist: playlist)
     }
     
-    func deleteSong(song: Song) {
+    static func deleteSong(song: Song) {
         CoreDataStack.contextMOC.delete(song)
         PlaylistController.sharedInstance.saveToPersistentStore()
     }

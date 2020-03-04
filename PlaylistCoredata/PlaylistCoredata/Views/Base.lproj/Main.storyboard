@@ -78,11 +78,14 @@
                         <viewLayoutGuide key="safeArea" id="Sus-rS-qYT"/>
                     </view>
                     <navigationItem key="navigationItem" title="Playlists" id="cCF-AX-KoL">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="yYY-SK-Nx2"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="yYY-SK-Nx2">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="HmN-eb-bLO" id="H0g-Rd-JzJ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="addButtonTapped" destination="yYY-SK-Nx2" id="wqh-t4-OTO"/>
-                        <outlet property="playlistNameTextField" destination="YS1-Ac-61u" id="NWc-Ao-bsW"/>
+                        <outlet property="playlistNameTextField" destination="S7v-h1-UnV" id="9ZK-5D-Pq7"/>
                         <outlet property="tableView" destination="Rj5-oj-Z3T" id="RJ5-wC-TXy"/>
                     </connections>
                 </viewController>
@@ -130,7 +133,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="yGe-Xz-w8V" detailTextLabel="dPy-yM-RdA" rowHeight="51" style="IBUITableViewCellStyleSubtitle" id="n4Y-jx-79N">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="songCell" textLabel="yGe-Xz-w8V" detailTextLabel="dPy-yM-RdA" rowHeight="51" style="IBUITableViewCellStyleSubtitle" id="n4Y-jx-79N">
                                         <rect key="frame" x="0.0" y="125" width="414" height="51"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="n4Y-jx-79N" id="4hL-Ii-mJo">
@@ -168,8 +171,17 @@
                         <viewLayoutGuide key="safeArea" id="fwX-yM-kPH"/>
                     </view>
                     <navigationItem key="navigationItem" title="Songs" id="ZqI-Zr-Wcq">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="c1M-AT-CGs"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="c1M-AT-CGs">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="xZj-Iz-N3e" id="UWk-8y-1U9"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="artistNameTextField" destination="pLe-ec-MKc" id="Qsa-Bs-W2k"/>
+                        <outlet property="songNameTextField" destination="VOz-Tb-2XN" id="wKi-IU-y4B"/>
+                        <outlet property="tableView" destination="gWu-XQ-ELf" id="fAz-Mz-DwY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FHm-jb-NgP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
